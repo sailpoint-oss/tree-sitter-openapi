@@ -9,12 +9,12 @@ extern "C" {
 
 /// OpenAPI YAML grammar.
 pub fn openapi() -> Language {
-    unsafe { Language::from_raw(tree_sitter_openapi()) }
+    unsafe { Language::from_raw(tree_sitter_openapi() as *const _) }
 }
 
 /// OpenAPI JSON grammar.
 pub fn openapi_json() -> Language {
-    unsafe { Language::from_raw(tree_sitter_openapi_json()) }
+    unsafe { Language::from_raw(tree_sitter_openapi_json() as *const _) }
 }
 
 #[cfg(test)]

@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Test parsers
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up tree-sitter CLI
+        uses: tree-sitter/setup-action/cli@v2
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Run grammar tests
+        run: make test
+
+      - name: Run Rust tests
+        run: cargo test
+
+      - name: Run Node binding tests
+        run: npm test

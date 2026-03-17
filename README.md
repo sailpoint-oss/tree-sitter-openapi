@@ -22,10 +22,10 @@ Highlighting and structure are version-agnostic; all of the above use the same Y
 
 This package ships two grammars:
 
-| Grammar       | Scope              | File types | Use case           |
-|---------------|--------------------|------------|--------------------|
-| `openapi`     | `source.openapi`   | yaml, yml  | YAML OpenAPI docs  |
-| `openapi_json`| `source.openapi.json` | json   | JSON OpenAPI docs  |
+| Grammar        | Scope                 | File types | Use case          |
+| -------------- | --------------------- | ---------- | ----------------- |
+| `openapi`      | `source.openapi`      | yaml, yml  | YAML OpenAPI docs |
+| `openapi_json` | `source.openapi.json` | json       | JSON OpenAPI docs |
 
 ## Installation
 
@@ -55,3 +55,5 @@ openapi = { install_info = { url = "https://github.com/.../tree-sitter-openapi",
 ## License
 
 MIT. The YAML grammar is adapted from [tree-sitter-yaml](https://github.com/tree-sitter-grammars/tree-sitter-yaml) (MIT). The JSON grammar is adapted from [tree-sitter-json](https://github.com/tree-sitter/tree-sitter-json) (MIT).
+
+100% Written by AI
