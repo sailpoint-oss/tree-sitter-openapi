@@ -1,0 +1,100 @@
+====================
+Standalone schema fragment
+====================
+
+{"type":"object","required":["id"],"properties":{"id":{"type":"integer","format":"int64"},"name":{"type":"string","enum":["dog","cat"]}},"additionalProperties":false}
+
+---
+
+(document
+  (object
+    (pair
+      (string
+        (string_content))
+      (string
+        (string_content)))
+    (pair
+      (string
+        (string_content))
+      (array
+        (string
+          (string_content))))
+    (pair
+      (string
+        (string_content))
+      (object
+        (pair
+          (string
+            (string_content))
+          (object
+            (pair
+              (string
+                (string_content))
+              (string
+                (string_content)))
+            (pair
+              (string
+                (string_content))
+              (string
+                (string_content)))))
+        (pair
+          (string
+            (string_content))
+          (object
+            (pair
+              (string
+                (string_content))
+              (string
+                (string_content)))
+            (pair
+              (string
+                (string_content))
+              (array
+                (string
+                  (string_content))
+                (string
+                  (string_content))))))))
+    (pair
+      (string
+        (string_content))
+      (false))))
+
+====================
+Standalone schema with allOf
+====================
+
+{"allOf":[{"$ref":"#/components/schemas/Base"},{"type":"object","properties":{"name":{"type":"string"}}}]}
+
+---
+
+(document
+  (object
+    (pair
+      (string
+        (string_content))
+      (array
+        (object
+          (pair
+            (string
+              (string_content))
+            (string
+              (string_content))))
+        (object
+          (pair
+            (string
+              (string_content))
+            (string
+              (string_content)))
+          (pair
+            (string
+              (string_content))
+            (object
+              (pair
+                (string
+                  (string_content))
+                (object
+                  (pair
+                    (string
+                      (string_content))
+                    (string
+                      (string_content))))))))))))

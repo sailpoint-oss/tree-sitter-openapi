@@ -1,0 +1,70 @@
+====================
+Standalone response fragment
+====================
+
+description: Success
+content:
+  application/json:
+    schema:
+      type: object
+headers:
+  X-Request-Id:
+    description: Request id
+
+---
+
+(stream
+  (document
+    (block_node
+      (block_mapping
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (flow_node
+            (plain_scalar
+              (string_scalar))))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (block_node
+            (block_mapping
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (block_node
+                  (block_mapping
+                    (block_mapping_pair
+                      (flow_node
+                        (plain_scalar
+                          (string_scalar)))
+                      (block_node
+                        (block_mapping
+                          (block_mapping_pair
+                            (flow_node
+                              (plain_scalar
+                                (string_scalar)))
+                            (flow_node
+                              (plain_scalar
+                                (string_scalar)))))))))))))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (block_node
+            (block_mapping
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (block_node
+                  (block_mapping
+                    (block_mapping_pair
+                      (flow_node
+                        (plain_scalar
+                          (string_scalar)))
+                      (flow_node
+                        (plain_scalar
+                          (string_scalar))))))))))))))

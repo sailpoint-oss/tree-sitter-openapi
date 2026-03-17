@@ -1,0 +1,185 @@
+====================
+Swagger 2.0 YAML
+====================
+
+swagger: "2.0"
+host: api.example.com
+basePath: /v1
+info:
+  title: Sample API
+  version: "1.0"
+paths:
+  /pets:
+    get:
+      summary: List pets
+definitions:
+  Pet:
+    type: object
+    properties:
+      name:
+        type: string
+
+---
+
+(stream
+  (document
+    (block_node
+      (block_mapping
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (flow_node
+            (double_quote_scalar)))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (flow_node
+            (plain_scalar
+              (string_scalar))))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (flow_node
+            (plain_scalar
+              (string_scalar))))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (block_node
+            (block_mapping
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (flow_node
+                  (plain_scalar
+                    (string_scalar))))
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (flow_node
+                  (double_quote_scalar))))))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (block_node
+            (block_mapping
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (block_node
+                  (block_mapping
+                    (block_mapping_pair
+                      (flow_node
+                        (plain_scalar
+                          (string_scalar)))
+                      (block_node
+                        (block_mapping
+                          (block_mapping_pair
+                            (flow_node
+                              (plain_scalar
+                                (string_scalar)))
+                            (flow_node
+                              (plain_scalar
+                                (string_scalar)))))))))))))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (block_node
+            (block_mapping
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (block_node
+                  (block_mapping
+                    (block_mapping_pair
+                      (flow_node
+                        (plain_scalar
+                          (string_scalar)))
+                      (flow_node
+                        (plain_scalar
+                          (string_scalar))))
+                    (block_mapping_pair
+                      (flow_node
+                        (plain_scalar
+                          (string_scalar)))
+                      (block_node
+                        (block_mapping
+                          (block_mapping_pair
+                            (flow_node
+                              (plain_scalar
+                                (string_scalar)))
+                            (block_node
+                              (block_mapping
+                                (block_mapping_pair
+                                  (flow_node
+                                    (plain_scalar
+                                      (string_scalar)))
+                                  (flow_node
+                                    (plain_scalar
+                                      (string_scalar))))))))))))))))))))
+
+====================
+OpenAPI 3.2.0 YAML
+====================
+
+openapi: "3.2.0"
+info:
+  title: Sample API
+  version: "1.0"
+paths: {}
+jsonSchemaDialect: https://spec.openapis.org/oas/3.2/dialect/base
+
+---
+
+(stream
+  (document
+    (block_node
+      (block_mapping
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (flow_node
+            (double_quote_scalar)))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (block_node
+            (block_mapping
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (flow_node
+                  (plain_scalar
+                    (string_scalar))))
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (flow_node
+                  (double_quote_scalar))))))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (flow_node
+            (flow_mapping)))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (flow_node
+            (plain_scalar
+              (string_scalar))))))))

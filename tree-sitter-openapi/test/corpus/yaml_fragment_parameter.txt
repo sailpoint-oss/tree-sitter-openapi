@@ -1,0 +1,82 @@
+====================
+Standalone parameter fragment
+====================
+
+name: limit
+in: query
+required: false
+description: Max items to return
+schema:
+  type: integer
+  default: 10
+  minimum: 1
+  maximum: 100
+
+---
+
+(stream
+  (document
+    (block_node
+      (block_mapping
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (flow_node
+            (plain_scalar
+              (string_scalar))))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (flow_node
+            (plain_scalar
+              (string_scalar))))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (flow_node
+            (plain_scalar
+              (boolean_scalar))))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (flow_node
+            (plain_scalar
+              (string_scalar))))
+        (block_mapping_pair
+          (flow_node
+            (plain_scalar
+              (string_scalar)))
+          (block_node
+            (block_mapping
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (flow_node
+                  (plain_scalar
+                    (string_scalar))))
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (flow_node
+                  (plain_scalar
+                    (integer_scalar))))
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (flow_node
+                  (plain_scalar
+                    (integer_scalar))))
+              (block_mapping_pair
+                (flow_node
+                  (plain_scalar
+                    (string_scalar)))
+                (flow_node
+                  (plain_scalar
+                    (integer_scalar)))))))))))

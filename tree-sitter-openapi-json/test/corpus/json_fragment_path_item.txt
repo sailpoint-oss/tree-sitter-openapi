@@ -1,0 +1,63 @@
+====================
+Standalone path item fragment
+====================
+
+{"get":{"operationId":"listPets","summary":"List pets","parameters":[],"responses":{"200":{"description":"OK"}}},"post":{"operationId":"createPet","responses":{"201":{"description":"Created"}}}}
+
+---
+
+(document
+  (object
+    (pair
+      (string
+        (string_content))
+      (object
+        (pair
+          (string
+            (string_content))
+          (string
+            (string_content)))
+        (pair
+          (string
+            (string_content))
+          (string
+            (string_content)))
+        (pair
+          (string
+            (string_content))
+          (array))
+        (pair
+          (string
+            (string_content))
+          (object
+            (pair
+              (string
+                (string_content))
+              (object
+                (pair
+                  (string
+                    (string_content))
+                  (string
+                    (string_content)))))))))
+    (pair
+      (string
+        (string_content))
+      (object
+        (pair
+          (string
+            (string_content))
+          (string
+            (string_content)))
+        (pair
+          (string
+            (string_content))
+          (object
+            (pair
+              (string
+                (string_content))
+              (object
+                (pair
+                  (string
+                    (string_content))
+                  (string
+                    (string_content)))))))))))
