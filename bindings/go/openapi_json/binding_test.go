@@ -5,7 +5,7 @@ import (
 	"unsafe"
 
 	tree_sitter "github.com/tree-sitter/go-tree-sitter"
-	tree_sitter_openapi_json "github.com/LukasParke/tree-sitter-openapi/bindings/go/openapi_json"
+	tree_sitter_openapi_json "github.com/sailpoint-oss/tree-sitter-openapi/bindings/go/openapi_json"
 )
 
 func TestCanLoadGrammar(t *testing.T) {

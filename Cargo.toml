@@ -4,7 +4,9 @@ version = "0.1.0"
 edition = "2021"
 description = "OpenAPI grammar for tree-sitter (YAML and JSON)"
 license = "MIT"
-repository = "https://github.com/tree-sitter-openapi/tree-sitter-openapi"
+repository = "https://github.com/sailpoint-oss/tree-sitter-openapi"
+
+build = "bindings/rust/build.rs"
 
 [lib]
 path = "bindings/rust/lib.rs"

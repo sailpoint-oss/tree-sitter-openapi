@@ -1,4 +1,4 @@
-module github.com/LukasParke/tree-sitter-openapi
+module github.com/sailpoint-oss/tree-sitter-openapi
 
 go 1.23
 

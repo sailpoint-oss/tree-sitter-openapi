@@ -1,9 +1,9 @@
 use std::path::PathBuf;
 
 fn main() {
-    let src = PathBuf::from(std::env::var("CARGO_MANIFEST_DIR").unwrap());
-    let openapi_src = src.join("../../tree-sitter-openapi/src");
-    let openapi_json_src = src.join("../../tree-sitter-openapi-json/src");
+    let root = PathBuf::from(std::env::var("CARGO_MANIFEST_DIR").unwrap());
+    let openapi_src = root.join("tree-sitter-openapi/src");
+    let openapi_json_src = root.join("tree-sitter-openapi-json/src");
 
     cc::Build::new()
         .include(&openapi_src)
