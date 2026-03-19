@@ -3,7 +3,6 @@ package tree_sitter_openapi
 // #cgo CFLAGS: -std=c11 -fPIC
 // #include "../../../tree-sitter-openapi/src/parser.c"
 // #include "../../../tree-sitter-openapi/src/scanner.c"
-// #include "../../../tree-sitter-openapi/src/schema.core.c"
 import "C"
 
 import "unsafe"
