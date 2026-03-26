@@ -2,6 +2,23 @@
 
 OpenAPI grammar for [tree-sitter](https://tree-sitter.github.io/). Parses **OpenAPI (Swagger) 2.0**, **OpenAPI 3.0.x**, **3.1.x**, and **3.2.x** documents in **YAML** and **JSON**, with **Markdown** injection into `description` fields.
 
+## Toolchain role
+
+`tree-sitter-openapi` is the grammar layer for the wider OpenAPI toolchain:
+
+- It owns YAML/JSON grammar quality, CST structure, injections, and language bindings.
+- It does **not** own the typed OpenAPI model, `$ref` resolution, parse-time validation, or lint rules.
+- `navigator` consumes this grammar to build the canonical OpenAPI IR.
+- `telescope` consumes the CST for editor features and precise ranges.
+
+## Fixture Matrix
+
+The grammar corpus is the CST layer of the shared toolchain fixture matrix:
+
+- `tree-sitter-openapi/test/corpus/` and `tree-sitter-openapi-json/test/corpus/` are the canonical parse-tree expectations for YAML and JSON.
+- Root documents, fragments, Swagger 2.0, OpenAPI 3.0/3.1/3.2, and markdown-in-description cases should stay represented in corpus coverage.
+- When adding new toolchain-wide fixture IDs in downstream repos, add or update the corresponding corpus case here so CST, IR, lint, and editor parity stay aligned.
+
 ## Supported versions
 
 - **Swagger 2.0** (OpenAPI 2.0) – `swagger: "2.0"`, `host`, `basePath`, `definitions`, `securityDefinitions`, etc.
