@@ -1,6 +1,6 @@
 # tree-sitter-openapi
 
-OpenAPI grammar for [tree-sitter](https://tree-sitter.github.io/). Parses **OpenAPI (Swagger) 2.0**, **OpenAPI 3.0.x**, **3.1.x**, and **3.2.x** documents in **YAML** and **JSON**, with **Markdown** injection into `description` fields.
+OpenAPI and Arazzo grammar for [tree-sitter](https://tree-sitter.github.io/). Parses **OpenAPI (Swagger) 2.0**, **OpenAPI 3.0.x**, **3.1.x**, and **3.2.x** documents plus **Arazzo 1.0.x** workflow documents in **YAML** and **JSON**, with **Markdown** injection into `description` fields.
 
 ## Toolchain role
 
@@ -8,15 +8,15 @@ OpenAPI grammar for [tree-sitter](https://tree-sitter.github.io/). Parses **Open
 
 - It owns YAML/JSON grammar quality, CST structure, injections, and language bindings.
 - It does **not** own the typed OpenAPI model, `$ref` resolution, parse-time validation, or lint rules.
-- `navigator` consumes this grammar to build the canonical OpenAPI IR.
-- `telescope` consumes the CST for editor features and precise ranges.
+- `navigator` consumes this grammar to build the canonical OpenAPI and Arazzo IRs.
+- `telescope` consumes the CST for editor features and precise ranges across OpenAPI and Arazzo files.
 
 ## Fixture Matrix
 
 The grammar corpus is the CST layer of the shared toolchain fixture matrix:
 
 - `tree-sitter-openapi/test/corpus/` and `tree-sitter-openapi-json/test/corpus/` are the canonical parse-tree expectations for YAML and JSON.
-- Root documents, fragments, Swagger 2.0, OpenAPI 3.0/3.1/3.2, and markdown-in-description cases should stay represented in corpus coverage.
+- Root documents, fragments, Swagger 2.0, OpenAPI 3.0/3.1/3.2, Arazzo workflows, and markdown-in-description cases should stay represented in corpus coverage.
 - When adding new toolchain-wide fixture IDs in downstream repos, add or update the corresponding corpus case here so CST, IR, lint, and editor parity stay aligned.
 
 ## Supported versions
@@ -26,12 +26,12 @@ The grammar corpus is the CST layer of the shared toolchain fixture matrix:
 - **OpenAPI 3.1.x** – same as 3.0 with `jsonSchemaDialect` and other 3.1 features
 - **OpenAPI 3.2.x** – same as 3.1 with 3.2 dialect and extensions
 
-Highlighting and structure are version-agnostic; all of the above use the same YAML/JSON grammar and OpenAPI-aware queries.
+Highlighting and structure are version-agnostic; all of the above use the same YAML/JSON grammar and API-description-aware queries.
 
 ## Features
 
-- **YAML** – Full YAML OpenAPI specs (block/flow, scalars, anchors, etc.)
-- **JSON** – JSON OpenAPI specs
+- **YAML** – Full YAML OpenAPI and Arazzo documents (block/flow, scalars, anchors, etc.)
+- **JSON** – JSON OpenAPI and Arazzo documents
 - **Root and fragment files** – Supports both full root documents and standalone fragment files referenced via `$ref` (e.g. a single schema, path item, parameter, or response in its own file). All common OpenAPI and JSON Schema keys are highlighted in fragments.
 - **Markdown in descriptions** – `description` values are injected with tree-sitter-markdown for highlighting in editors that support language injection (Neovim, Helix, Zed)
 

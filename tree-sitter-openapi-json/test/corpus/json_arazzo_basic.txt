@@ -1,0 +1,28 @@
+====================
+Basic JSON Arazzo
+====================
+
+{"arazzo":"1.0.1","info":{"title":"Workflow","version":"1.0.0"},"sourceDescriptions":[],"workflows":[]}
+
+---
+
+(document
+  (object
+    (pair
+      key: (string (string_content))
+      value: (string (string_content)))
+    (pair
+      key: (string (string_content))
+      value: (object
+        (pair
+          key: (string (string_content))
+          value: (string (string_content)))
+        (pair
+          key: (string (string_content))
+          value: (string (string_content)))))
+    (pair
+      key: (string (string_content))
+      value: (array))
+    (pair
+      key: (string (string_content))
+      value: (array))))
