@@ -3,14 +3,20 @@ name: Auto-tag
 on:
   push:
     branches: [main, master]
+  workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: tree-sitter-openapi-tag
+  cancel-in-progress: false
 
 jobs:
   tag:
     name: Create tag from version
     runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message || '', '[skip release]') }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
